@@ -1,0 +1,99 @@
+<%- include('./index.ejs') %>
+    <style>
+        .top-nav {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+        }
+        
+        .book-btn {
+            margin: auto;
+            align-items: center;
+        }
+    </style>
+    <div class="top-nav">
+        <div class="header">
+            <h1>Dolphin Cove Database</h1>
+
+        </div>
+    </div>
+    <div class="link">
+        <button class="btn">        <a href="/view/view">Go Back</a>
+        </button>
+
+    </div>
+
+    <div class="book-btn">
+        <button class="btn-success"><a href="/admin/admin">Book A client</a></button>
+    </div>
+    <div class="wel">
+        <%= data[1].username %>
+    </div>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Tour Company</th>
+                <th>Program</th>
+                <th>Adults</th>
+                <th>Children</th>
+                <th>Infants</th>
+                <th>Hotel</th>
+                <th>Book Date</th>
+                <th>Date</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% if(data.length){
+                                                     
+                                                    for(var i = 0; i< data.length; i++) {%>
+                <tr>
+                    <td>
+                        <b><%= data[i].id %></b>
+                    </td>
+                    <td>
+                        <%= data[i].f_nm %>
+                    </td>
+                    <td>
+                        <%= data[i].l_nm %>
+                    </td>
+                    <td>
+                        <%= data[i].tour_co %>
+                    </td>
+                    <td>
+                        <%= data[i].prog_id %>
+                    </td>
+                    <td>
+                        <%= data[i].adults %>
+                    </td>
+                    <td>
+                        <%= data[i].children %>
+                    </td>
+                    <td>
+                        <%= data[i].infants %>
+                    </td>
+                    <td>
+                        <%= data[i].hotel %>
+                    </td>
+                    <td>
+                        <%=  new Date(data[i].bk_dt).toLocaleString() %>
+
+                    </td>
+
+                    <td>
+                        <%= new Date(data[i].exc_dt).toLocaleString() %>
+                    </td>
+                </tr>
+                <% }
+                                                         
+                                                    }else{ %>
+                    <tr>
+                        <td colspan="3">No Data</td>
+                    </tr>
+                    <%}%>
+
+        </tbody>
+
+    </table>

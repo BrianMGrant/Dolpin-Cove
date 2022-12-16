@@ -1,0 +1,280 @@
+<style>
+    body {
+        padding: 0;
+        margin: 0;
+    }
+    
+    input {
+        width: 50%;
+    }
+    
+    .header-container {
+        margin-bottom: 13em;
+    }
+    
+    .side-container {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        justify-content: space-evenly;
+        margin: auto;
+        height: 20%;
+        gap: 20em;
+        margin-top: -22%;
+        text-align: center
+    }
+    
+    .side-blur {
+        border-radius: 5px;
+    }
+    
+    .info {
+        width: 80%;
+        margin: auto;
+    }
+    
+    form {
+        float: right;
+        margin-top: -20%;
+        padding: 20px;
+        background: rgba(255, 255, 255, 0.473);
+    }
+    
+    .blue-section {
+        background-color: rgb(9, 121, 155);
+        color: white;
+        text-align: center;
+        padding: 30px;
+        margin-bottom: 3em;
+    }
+    
+    .container {
+        margin-bottom: 3em;
+    }
+    
+    .payment-box {
+        align-items: center;
+    }
+    
+    .dolphin {
+        text-align: center;
+        padding: 4em;
+        text-decoration: underline solid rgb(9, 121, 155);
+    }
+    
+    .park-heading {
+        text-align: center;
+        padding: 2em;
+        text-decoration: underline solid rgb(9, 121, 155);
+    }
+    
+    .footer {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        background-color: rgb(9, 121, 155);
+        color: whitesmoke;
+        padding: 2em;
+    }
+</style>
+<%- include('./index.ejs') %>
+    <div class="header-container">
+        <div class="image-container">
+
+            <img src="https://www.dtraveller.com/promotions/imagesDD//coveja-25off.jpg" width="100%">
+        </div>
+        <div class="side-container">
+            <div class="side-blur">
+                <!-- <div class="side-img">
+                    <img src="https://www.dolphincoveja.com/Content/src/logo.png">
+                </div>
+                <h1>Welcome to Dolphin Cove</h1>
+                <h3>Where fun and excitement is a must</h3> -->
+            </div>
+            <div class="form-side">
+                <%- include('./booking.ejs') %>
+            </div>
+
+        </div>
+    </div>
+
+    </div>
+    <div class="container">
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+            <div class="col">
+                <div class="card h-100">
+                    <img src="https://www.dolphincoveja.com/Content/media/cove-ocho-rios/shark-encounter.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Shark Encounter</h5>
+                        <p class="card-text">Feel the thrill!!!</p>
+                        <p><b>$<%= data[1].price %>JMD</b></p>
+                        <p>
+
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100">
+                    <img src="https://www.dolphincoveja.com/Content/media/cove-ocho-rios/swim-adventure-dunns.jpg" class="card-img-top" alt="It Nah Work">
+                    <div class="card-body">
+                        <h5 class="card-title">Swimming with Dolphins</h5>
+                        <p class="card-text">Swim with the dolphins in the Caribbean</p>
+                        <p><b>$<%= data[0].price %>JMD</b></p>
+
+                    </div>
+
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100">
+                    <img src="https://www.dolphincoveja.com/Content/media/cove-ocho-rios/royal-swim-dunns.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Dolphin Royal Swim</h5>
+                        <p class="card-text">Maximum Speed and Action</p>
+                        <p><b>$<%= data[2].price %>JMD</b></p>
+
+                    </div>
+
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100">
+                    <img src="https://www.dolphincoveja.com/Content/media/cove-ocho-rios/dolphin-encounter-dunnfalls.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Encounter</h5>
+                        <p class="card-text">Perfect for the whole family</p>
+                        <p><b>$<%= data[3].price %>JMD</b></p>
+
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="info-section">
+        <div class="blue-section">
+            <div class="black">
+                <h1>Welcome to Dolphin Cove Jamaica</h1>
+                <h4>Part of the Dolphin Discovery Group, the largest dolphin company in the world</h4>
+            </div>
+        </div>
+        <div class="info">
+            <p>Did you know that swimming with dolphins is considered one of the top 10 bucket list items? When you come to Dolphin Cove Jamaica you not only get a chance to live this dream; you have the opportunity to knock off a few more, like ride a camel
+                and interact with stingrays. Here a place where you come for the day but remember for a lifetime. One of the many things that make Dolphin Cove Jamaica special is that you can live the experience of swimming with dolphins in the natural
+                Caribbean Sea. Here you have the opportunity to enjoy the company of different fish, rays, and other forms of natural sea life. Dolphin Cove Jamaica is the place to spend the day enjoying lots of fun activities. There is truly something
+                for everyone! Dolphin Cove Jamaica is full of natural wonders and beauty you gotta see for yourself! In Dolphin Cove Ocho Rios you’ll enjoy strolling around in the Jungle Trail, where you will notice many different wild animals, plants,
+                and trees. At Dolphin Cove Jamaica we respect the environment of all the species, here you will live the most natural experience you’ve ever had.</p>
+        </div>
+
+    </div>
+
+
+    <div class="dolphin">
+        <h1>DISCOVER OUR SWIM WITH DOLPHINS PROGRAMS</h1>
+    </div>
+    <div class="container">
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+            <div class="col">
+                <div class="card h-100">
+                    <img src="https://www.dolphincoveja.com/Content/media/cove-ocho-rios/swim-adventure-dunns.jpg" class="card-img-top" alt="It Nah Work">
+                    <div class="card-body">
+                        <h5 class="card-title">Swimming with Dolphins</h5>
+                        <p class="card-text">
+                            <p><b>SWIM WITH THE DOLPHINS</b></p>
+                            <p>
+                                <p>
+                                    At Dolphin Cove, interact with one dolphin while swimming in the deep. Enjoy a kiss, try a dance, perhaps you will get a splash or two and have a real up close experience.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100">
+                    <img src="https://www.dolphincoveja.com/Content/media/cove-ocho-rios/royal-swim-dunns.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Dolphin Royal Swim</h5>
+                        <p class="card-text">
+                            <p><b>FUN TO THE LIMIT!</b></p>
+                            The most fun and unique program, designed to exceed all your expectations.Feel the thrill of foot-push; The dolphins will rise you above the water surface by pushing you from the soles of your feet.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100">
+                    <img src="https://www.dolphincoveja.com/Content/media/cove-ocho-rios/dolphin-encounter-dunnfalls.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Encounter</h5>
+                        <p class="card-text"><b>A DAY OF FUN</b></p>
+                        <p>They will give you a kiss and allow you to caress them while standing in knee deep water. This adventure is best for those who are not comfortable swimming in the sea and the very young.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="parks">
+        <div class="park-heading">
+            <h1>Our Parks</h1>
+        </div>
+        <div class="container">
+            <div class="row row-cols-1 row-cols-md-3 g-4">
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="https://www.dolphincoveja.com/Content/src/programs/NE/gallery/gallery3.jpg" class="card-img-top" alt="It Nah Work">
+                        <h5 class="card-title">Dolphin Cove Montego Bay</h5>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="https://www.dolphincoveja.com/Content/src/programs/OR/gallery/gallery4.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Dolphin Cove Ocho Rios</h5>
+                            <p class="card-text">
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="https://www.dolphincoveja.com/Content/src/programs/PJ/gallery/gallery1.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Moon Palace Jamaica Grande</h5>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="https://www.dolphincoveja.com/Content/src/programs/PS/gallery/gallery2.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Dolphin Cove Puerto Seco Beach</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="footer">
+        <div class="left-side">
+            <li><a href="/admin/admin">Login</a></li>
+            <li>Information</li>
+            <li>News</li>
+            <li>About Us</li>
+            <li>Investor Relations</li>
+            <li>Privacy Policy</li>
+            <li>Terms and conditions</li>
+        </div>
+
+        <div class="right-side">
+            <h4>CONTACT US</h4>
+            <p>1-877-344-3385 Canada 1-866-793-1905</p>
+            <p>United Kingdom 0-800-680-0420 Mexico 01-800-727-5391 </p>
+            <p>Dominican Republic 1-888-751-9005 United States 1-866-393-5158</p>
+            <p>Contact Us PARTNERS:</p>
+            </p>
+
+        </div>
+    </div>

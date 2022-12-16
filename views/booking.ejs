@@ -1,0 +1,86 @@
+<style>
+    .flexer {
+        display: flex;
+        flex-direction: row;
+        gap: 0.5em;
+    }
+    
+    .form-container {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+    
+    .date {
+        width: 50%;
+        height: 40px;
+        border-radius: 5px;
+        border: none;
+    }
+    
+    input {
+        width: 50% !important;
+        border-radius: 5px;
+        border: none;
+    }
+    
+    form {
+        width: 60%;
+        border-radius: 5px;
+        font-size: 13px;
+    }
+    
+    .btn {
+        background-color: rgb(9, 121, 155);
+        color: white;
+    }
+</style>
+
+<form name="bookForm" action="/booking/booking/update" method="post">
+    <div class="form-container">
+        <div class="header">
+            <h4>Book now</h4>
+        </div>
+        <div class="flexer">
+            <input type="text" name="f_nm" placeholder="Your First Name">
+            <input type="text" name="l_nm" placeholder="Your Last Name">
+            <input type="text" name="hotel" placeholder="Hotel name">
+        </div>
+        <div class="flexer">
+            <label for="adults">Adults</label>
+
+            <input type="number" id="adults" name="adults" value="0">
+            <label for="child">Children</label>
+
+            <input type="number" name="children" value="0">
+            <label for="inf">Infants</label>
+
+            <input type="number" name="infants" value="0">
+        </div>
+        <div class="flexer">
+            <label for="bk-dt">Book Date</label>
+            <input class="date" type="date" name="bk_dt">
+            <label for="exc-dt">Excursion Date</label>
+            <input class="date" type="date" name="exc_dt">
+        </div>
+        <div class="flexer">
+            <label for="program">Programs</label>
+            <select name="program">
+                        <option disabled selected>Choose a program</option>
+                        <option><%= data[0].pro_nm %> </option>
+                        <option><%= data[1].pro_nm %></option>
+                        <option><%= data[2].pro_nm %></option>
+                        <option><%= data[3].pro_nm %></option>
+                        <option><%= data[4].pro_nm %></option>
+    
+                        
+                    </select>
+        </div>
+
+
+        <button class="btn">Book</button>
+
+    </div>
+
+
+</form>

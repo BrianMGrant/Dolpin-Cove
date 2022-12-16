@@ -1,0 +1,108 @@
+<style>
+    .container {
+        border: 1px solid rgb(218, 215, 215);
+        border-radius: 10px;
+        width: 50%;
+        margin: auto;
+        background-color: rgba(182, 177, 177, 0.368);
+        padding: 40px;
+    }
+    
+    .section-one,
+    .section-two,
+    .section-three {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+    
+    .heading {
+        text-align: center;
+        color: greenyellow;
+        animation-name: example;
+        animation-duration: 15s;
+    }
+    
+    @keyframes example {
+        0% {
+            color: blue;
+        }
+        50% {
+            color: greenyellow;
+        }
+    }
+    /* .heading {
+        margin: auto;
+        transition: ease-in-out 3s red;
+    } */
+    
+    .link a {
+        color: white;
+    }
+    
+    a {
+        text-decoration: none;
+    }
+    
+    .btn {
+        border-radius: 5px;
+        border: none;
+        background-color: rgb(103, 208, 232);
+        padding: 3px;
+    }
+</style>
+
+<body>
+    <div class="link">
+        <button class="btn">        <a href="/view/view">Go Back</a>
+        </button>
+
+    </div>
+
+    </div>
+    <div class="heading">
+        <h1>
+            Booking Was Successful!!
+        </h1>
+
+    </div>
+
+    <% for(var i = 0; i < data.length; i++) {%>
+        <div class="container">
+            <div class="section-one">
+                <p>First Name :
+                    <%= data[i].f_nm %>
+                </p>
+                <p> Last Name :
+                    <%= data[i].l_nm %>
+                </p>
+                <p>Program Booked:
+                    <%= data[i].prog_id %>
+                </p>
+            </div>
+            <div class="section-two">
+                <p>Adult/s:
+                    <%= data[i].adults %>
+                </p>
+                <p>Children:
+                    <%= data[i].children %>
+                </p>
+                <p>Infant/s:
+                    <%= data[i].infants %>
+                </p>
+            </div>
+            <div class="section-three">
+                <p>Hotel:
+                    <%= data[i].hotel %>
+                </p>
+                <p>Booked Date:
+                    <%=  new Date(data[i].bk_dt).toLocaleString() %>
+                </p>
+                <p>Excursion Date:
+                    <%= new Date(data[i].exc_dt).toLocaleString() %>
+                </p>
+            </div>
+        </div>
+        <p>Made a mistake? <a href="/admin/admin/edit/<%=data[i].id%>">Edit</a></p>
+        <% } %>
+</body>
